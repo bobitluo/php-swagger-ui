@@ -1,19 +1,19 @@
 <?php
-header('Access-Control-Allow-Origin: * ');
-header('Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS');
-header('Access-Control-Allow-Credentials: true');
-header('Access-Control-Allow-Headers: Content-Type, api_key, Authorization');
-header('Content-type: application/json');
-
-if($_SERVER['REQUEST_METHOD'] == 'OPTIONS'){
-    exit();
-}
-
 require __DIR__ . '/../vendor/autoload.php';
 $config = \Noodlehaus\Config::load( __DIR__ . '/../config.yaml' );
 $configProjects = $config->get('projects');
 
 if( isset($_GET['p']) && $_GET['p'] ){
+    header('Access-Control-Allow-Origin: * ');
+    header('Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS');
+    header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Allow-Headers: Content-Type, api_key, Authorization');
+    header('Content-type: application/json');
+
+    if($_SERVER['REQUEST_METHOD'] == 'OPTIONS'){
+        exit();
+    }
+
     $project = $_GET['p'];
     $configProject = $configProjects[$project];
 
