@@ -1,0 +1,19 @@
+{
+    "name": "luojianbo/php-swagger-ui",
+    "description" : "基于php-swagger的web网站",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "bobitluo",
+            "email": "bobitluo@gmail.com"
+        }
+    ],
+    "require": {
+        "phpdocumentor/reflection-docblock": "^5@alpha",
+        "phpdocumentor/reflection": "^4@alpha",
+        "bobitluo/php-swagger": "^0.1",
+        "hassankhan/config": "^2.0",
+        "symfony/yaml": "^4.3.3"
+    }
+}
